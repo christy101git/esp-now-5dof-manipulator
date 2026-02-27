@@ -48,47 +48,50 @@ ESP-NOW was selected over standard Wi-Fi or Bluetooth due to its peer-to-peer MA
 ├── Schematics/              # Circuit diagrams and wiring guides
 └── README.md                # Project documentation
 ```
-## Getting Started
-# Prerequisites
+# Getting Started
+## Prerequisites
 * Arduino IDE (with ESP32 board manager installed)
 
 * Python 3.x (for the GUI)
 
 * Required Arduino Libraries: esp_now.h, WiFi.h, Adafruit_PWMServoDriver.h , Wire.h
 
-# Installation & Flashing
+## Installation & Flashing
 1. Clone the repository:
 git clone [https://github.com/christy101git/esp-now-5dof-manipulator.git](https://github.com/christy101git/esp-now-5dof-manipulator.git)
+
 2. Pairing the ESP32 and ESP8266:
 
-* Open the Code_Transmitter_Glove sketch.
+ * Open the Code_Transmitter_Glove sketch.
 
-* Modify the target MAC Address variable to match your Arm's ESP32 MAC address.
+ * Modify the target MAC Address variable to match your Arm's ESP32 MAC address.
 
-* Flash the code to the Glove ESP8266.
+ * Flash the code to the Glove ESP8266.
 
-# Flashing the Arm:
+## Flashing the Arm:
 
-* Open the Code_Receiver_Arm sketch and flash it to the Arm ESP32.
+ * Open the Code_Receiver_Arm sketch and flash it to the Arm ESP32.
 
-# Running the GUI:
+## Running the GUI:
 
-* Navigate to the GUI_Dashboard folder.
+ * Navigate to the GUI_Dashboard folder.
 
-* Run the control script: python main_gui.py
+ * Run the control script: python main_gui.py
 
-# Challenges & Solutions
-Each servo was calibrated by checking the physical limits of each servos and changing the ticks in the code for the PWM servo driver.
+## Challenges & Solutions
+
+* Each servo was calibrated by checking the physical limits of each servos and changing the ticks in the code for the PWM servo driver.
 
 
-Author
-Christy Roy
+# Author
+ **Christy Roy**
 
-GitHub: github.com/christy101git
+ * GitHub: github.com/christy101git
 
-Portfolio: christy101git.github.io/portfolio
+ * Portfolio: christy101git.github.io/portfolio
 
-LinkedIn: [Insert your LinkedIn Profile URL]
+ * LinkedIn: [Insert your LinkedIn Profile URL]
+ 
+#  License
 
-📄 License
-This project is licensed under the MIT License - see the LICENSE file for details.
+ This project is licensed under the MIT License - see the LICENSE file for details.
