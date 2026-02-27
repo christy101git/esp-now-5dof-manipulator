@@ -21,15 +21,14 @@ A dedicated desktop GUI provides real-time system monitoring, sensor feedback vi
 
 ### 1. The Manipulator Arm
 * **Microcontroller:** ESP32 (Receiver)
-* **Actuators:** MG995 High-Torque Servos
-* **Sensors:** AS5600 Magnetic Encoders (for high-precision positional feedback)
+* **Actuators:** MG995 360 degree modified for base. One 180 degree MG995 Servos. Three SG90 servos. 
 * **Structure:** Custom 3D-printed chassis and 360-degree rotating base (designed in SolidWorks)
-* **Power Supply:** [Insert your power supply details, e.g., 5V 10A DC Power Supply]
+* **Power Supply:** Created a custom 6 V 10 A suppply using 2 3.4V 10A rechargeable LIPO cells , 2S BMS Module ,LM2596 Buck converter , PCA9685 Servo driver
 
 ### 2. The Teleoperation Glove
-* **Microcontroller:** ESP32 (Transmitter)
-* **Sensors:** [Insert your glove sensors, e.g., Flex Sensors / MPU6050 IMU]
-* **Power:** [Insert battery type, e.g., 3.7V LiPo Battery]
+* **Microcontroller:** ESP8266 (Transmitter)
+* **Sensors:**  MPU6050 IMU Gyro/acceleration sensor
+* **Power:** 5V powerbank and a switch.
 
 ## Software Architecture
 
@@ -49,41 +48,38 @@ ESP-NOW was selected over standard Wi-Fi or Bluetooth due to its peer-to-peer MA
 ├── Schematics/              # Circuit diagrams and wiring guides
 └── README.md                # Project documentation
 ```
-Getting Started
-Prerequisites
-Arduino IDE (with ESP32 board manager installed)
+## Getting Started
+# Prerequisites
+* Arduino IDE (with ESP32 board manager installed)
 
-Python 3.x (for the GUI)
+* Python 3.x (for the GUI)
 
-Required Arduino Libraries: esp_now.h, WiFi.h, [Add any servo/encoder libraries you used]
+* Required Arduino Libraries: esp_now.h, WiFi.h, Adafruit_PWMServoDriver.h , Wire.h
 
-Installation & Flashing
-Clone the repository:
-
-Bash
+# Installation & Flashing
+1. Clone the repository:
 git clone [https://github.com/christy101git/esp-now-5dof-manipulator.git](https://github.com/christy101git/esp-now-5dof-manipulator.git)
-Pairing the ESP32s:
+2. Pairing the ESP32 and ESP8266:
 
-Open the Code_Transmitter_Glove sketch.
+* Open the Code_Transmitter_Glove sketch.
 
-Modify the target MAC Address variable to match your Arm's ESP32 MAC address.
+* Modify the target MAC Address variable to match your Arm's ESP32 MAC address.
 
-Flash the code to the Glove ESP32.
+* Flash the code to the Glove ESP8266.
 
-Flashing the Arm:
+# Flashing the Arm:
 
-Open the Code_Receiver_Arm sketch and flash it to the Arm ESP32.
+* Open the Code_Receiver_Arm sketch and flash it to the Arm ESP32.
 
-Running the GUI:
+# Running the GUI:
 
-Navigate to the GUI_Dashboard folder.
+* Navigate to the GUI_Dashboard folder.
 
-Run the control script: python main_gui.py
+* Run the control script: python main_gui.py
 
-Challenges & Solutions
-Servo Jitter Mitigation: Early iterations experienced jitter when holding heavy loads. Solution: Implemented a deadband filter in the control logic and smoothed the raw data coming from the AS5600 encoders to stabilize the MG995 holding torque.
+# Challenges & Solutions
+Each servo was calibrated by checking the physical limits of each servos and changing the ticks in the code for the PWM servo driver.
 
-[Insert another challenge here]: [Insert how you solved it]
 
 Author
 Christy Roy
