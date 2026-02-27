@@ -1,4 +1,4 @@
-# ESP-NOW Enabled 5-DOF Robotic Manipulator with Teleoperation Glove
+# ESP-NOW Enabled 5-DOF Robotic Manipulator with Teleoperation Glove with a custom GUI
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 ![Hardware](https://img.shields.io/badge/Hardware-ESP32%20%7C%20MG995-orange)
@@ -14,14 +14,13 @@ A dedicated desktop GUI provides real-time system monitoring, sensor feedback vi
 ## Key Features
 * **Low-Latency Teleoperation:** Utilizes the ESP-NOW protocol for direct, router-less communication between the sensor glove and the robotic arm, ensuring near-instantaneous response times.
 * **5-DOF Kinematics:** Fully articulated 360-degree base and arm structure for complex spatial manipulation.
-* **Closed-Loop Feedback:** Integration of magnetic encoders to ensure accurate positional holding and jitter reduction.
 * **Custom Control Dashboard:** A dedicated Graphical User Interface (GUI) for real-time telemetry, calibration, and system diagnostics.
 
 ## Hardware Architecture & Bill of Materials
 
 ### 1. The Manipulator Arm
 * **Microcontroller:** ESP32 (Receiver)
-* **Actuators:** MG995 360 degree modified for base. One 180 degree MG995 Servos. Three SG90 servos. 
+* **Servos:** MG995 360 degree modified for base. One 180 degree MG995 Servos. Three SG90 servos. 
 * **Structure:** Custom 3D-printed chassis and 360-degree rotating base (designed in SolidWorks)
 * **Power Supply:** Created a custom 6 V 10 A suppply using 2 3.4V 10A rechargeable LIPO cells , 2S BMS Module ,LM2596 Buck converter , PCA9685 Servo driver
 
@@ -39,7 +38,7 @@ ESP-NOW was selected over standard Wi-Fi or Bluetooth due to its peer-to-peer MA
 * **Framework:** [Insert your GUI framework, e.g., Python Tkinter / PyQt5]
 * **Features:** Live joint angle visualization, connection status monitoring, and calibration modes.
 
-##  Repository Structure
+###  Repository Structure
 ```text
 ├── 3D_Models/               # .stl files and SolidWorks parts for the arm structure
 ├── Code_Transmitter_Glove/  # ESP32 C++ code for reading glove sensors and sending data
@@ -48,25 +47,25 @@ ESP-NOW was selected over standard Wi-Fi or Bluetooth due to its peer-to-peer MA
 ├── Schematics/              # Circuit diagrams and wiring guides
 └── README.md                # Project documentation
 ```
-# Getting Started
-## Prerequisites
+
+### Prerequisites
 * Arduino IDE (with ESP32 board manager installed)
 
 * Python 3.x (for the GUI)
 
 * Required Arduino Libraries: esp_now.h, WiFi.h, Adafruit_PWMServoDriver.h , Wire.h
 
-## Installation & Flashing
-1. Clone the repository:
+### Installation & Flashing
+ 1. Clone the repository:
 git clone [https://github.com/christy101git/esp-now-5dof-manipulator.git](https://github.com/christy101git/esp-now-5dof-manipulator.git)
 
-2. Pairing the ESP32 and ESP8266:
+ 2. Pairing the ESP32 and ESP8266:
 
- * Open the Code_Transmitter_Glove sketch.
+   * Open the Code_Transmitter_Glove sketch.
 
- * Modify the target MAC Address variable to match your Arm's ESP32 MAC address.
+   * Modify the target MAC Address variable to match your Arm's ESP32 MAC address.
 
- * Flash the code to the Glove ESP8266.
+   * Flash the code to the Glove ESP8266.
 
 ## Flashing the Arm:
 
@@ -90,7 +89,7 @@ git clone [https://github.com/christy101git/esp-now-5dof-manipulator.git](https:
 
  * Portfolio: christy101git.github.io/portfolio
 
- * LinkedIn: [Insert your LinkedIn Profile URL]
+ * LinkedIn: www.linkedin.com/in/christy-roy-60989433b
  
 #  License
 
