@@ -48,7 +48,8 @@ ESP-NOW was selected over standard Wi-Fi or Bluetooth due to its peer-to-peer MA
 ├── GUI_Dashboard/           # Python scripts for the desktop interface
 ├── Schematics/              # Circuit diagrams and wiring guides
 └── README.md                # Project documentation
- Getting Started
+```
+Getting Started
 Prerequisites
 Arduino IDE (with ESP32 board manager installed)
 
