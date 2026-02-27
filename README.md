@@ -48,24 +48,22 @@ ESP-NOW was selected over standard Wi-Fi or Bluetooth due to its peer-to-peer MA
 └── README.md                # Project documentation
 ```
 
-### Prerequisites
+## Prerequisites
 * Arduino IDE (with ESP32 board manager installed)
 
 * Python 3.x (for the GUI)
 
 * Required Arduino Libraries: esp_now.h, WiFi.h, Adafruit_PWMServoDriver.h , Wire.h
 
-### Installation & Flashing
- 1. Clone the repository:
+## Installation & Flashing
+ #1. Clone the repository:
 git clone [https://github.com/christy101git/esp-now-5dof-manipulator.git](https://github.com/christy101git/esp-now-5dof-manipulator.git)
 
- 2. Pairing the ESP32 and ESP8266:
-
-   * Open the Code_Transmitter_Glove sketch.
-
-   * Modify the target MAC Address variable to match your Arm's ESP32 MAC address.
-
-   * Flash the code to the Glove ESP8266.
+ #2. Pairing the ESP32 and ESP8266:
+    
+ * Open the Code_Transmitter_Glove sketch.
+ * Modify the target MAC Address variable to match your Arm's ESP32 MAC address.
+ * Flash the code to the Glove ESP8266.
 
 ## Flashing the Arm:
 
