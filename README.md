@@ -83,11 +83,9 @@ git clone [https://github.com/christy101git/esp-now-5dof-manipulator.git](https:
 # Author
  **Christy Roy**
 
- * GitHub: github.com/christy101git
-
  * Portfolio: christy101git.github.io/portfolio
 
- * LinkedIn: www.linkedin.com/in/christy-roy-60989433b
+ * LinkedIn: www.linkedin.com/in/christy-roy-robotics
  
 #  License
 
